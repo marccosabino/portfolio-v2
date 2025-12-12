@@ -1,17 +1,17 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Sobre from "./components/Sobre";
+import Projetos from "./components/Projetos";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
       <Header />
-
-      {/* Espaço para compensar o header fixo (se existir) */}
-      <div className="pt-28 px-6">
-        <Hero />
-
-        {/* resto do conteúdo futuramente */}
-      </div>
+      <Hero />
+      <Sobre />
+      <Projetos />
+      <Footer />
     </>
   );
 }

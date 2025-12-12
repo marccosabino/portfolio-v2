@@ -1,0 +1,122 @@
+/* ----------- HEADER BASE ----------- */
+.header {
+  width: 100%;
+  padding: 14px 0;
+  background: rgba(5, 15, 40, 0.55); /* navy blue translúcido */
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ----------- LOGO ----------- */
+.logo {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: default;
+
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ----------- NAV ----------- */
+.nav {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+}
+
+/* Hover futurista */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+
+/* ----------- BOTÃO CONTATO ----------- */
+.contact-btn {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 8px 16px;
+
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: white;
+  color: #0a1a3f;  /* navy */
+  box-shadow: 0 0 14px rgba(255,255,255,0.35);
+}
+
+/* HEADER NORMAL */
+.header {
+  width: 100%;
+  padding: 14px 0;
+  background: rgba(5, 15, 40, 0.55);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transition: padding 0.25s ease, background 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+/* HEADER SHRINK */
+.header.shrink {
+  padding: 6px 0;
+  background: rgba(5, 15, 40, 0.75);
+  backdrop-filter: blur(18px);
+}
+
+/* LOGO ANIMAÇÃO */
+.logo {
+  transition: transform 0.25s ease, letter-spacing 0.25s ease;
+}
+
+.header.shrink .logo {
+  transform: scale(0.92);
+  letter-spacing: 0.4px;
+}
+
+/* NAV LINKS */
+.nav-link {
+  transition: padding 0.25s ease, background 0.25s ease;
+}
+
+.header.shrink .nav-link {
+  padding: 4px 8px;
+}
+
+/* BOTÃO CONTATO */
+.contact-btn {
+  transition: padding 0.25s ease, border 0.25s ease, background 0.25s ease;
+}
+
+.header.shrink .contact-btn {
+  padding: 6px 14px;
+}

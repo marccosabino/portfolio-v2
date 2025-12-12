@@ -1,10 +1,7 @@
-import "./Footer.css";
-
 export default function Footer() {
   return (
-    <footer className="footer">
-      <img src="/icon.png" alt="Ícone" className="footer-icon" />
-      <span className="footer-name">Marco</span>
+    <footer className="w-full py-10 text-center text-white opacity-60 text-sm">
+      © {new Date().getFullYear()} Marco Sabino — Todos os direitos reservados.
     </footer>
   );
 }
