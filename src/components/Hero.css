@@ -1,0 +1,115 @@
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.hero-icon-btn {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.hero-icon-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.hero-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 700px;
+  color: #e5e5e5;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: center;  /* Garante centralização */
+}
+
+
+.hero-full {
+  position: relative;
+  width: 100%;
+  padding: 120px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Alinha tudo ao centro */
+  justify-content: center;
+  text-align: center;    /* Centraliza textos */
+  overflow: hidden;
+}
+
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+/* Esfera azul no topo esquerdo */
+.sphere1 {
+  top: 50px;
+  left: 50px;
+  width: 220px;
+  height: 220px;
+  background: rgba(59, 130, 246, 0.45); /* azul */
+  animation-duration: 10s;
+}
+
+/* Esfera roxa no canto inferior direito */
+.sphere2 {
+  bottom: 60px;
+  right: 60px;
+  width: 260px;
+  height: 260px;
+  background: rgba(168, 85, 247, 0.45); /* roxo */
+  animation-duration: 12s;
+  animation-delay: 1.2s;
+}
+
+/* Esfera ciano no meio lateral direita */
+.sphere3 {
+  top: 50%;
+  right: 25%;
+  width: 160px;
+  height: 160px;
+  background: rgba(34, 211, 238, 0.40); /* ciano */
+  animation-duration: 9s;
+  animation-delay: 0.4s;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-18px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
