@@ -54,22 +54,22 @@
 
 /* Hover futurista */
 .nav-link:hover {
-  background: rgba(255, 212, 0, 0.12);
-  box-shadow: 0 0 12px rgba(255,212,0,0.35);
+  background: rgba(255, 227, 0, 0.14);
+  box-shadow: 0 0 14px rgba(255,227,0,0.45);
 }
 
 /* ----------- BOTÃO CONTATO ----------- */
 .contact-btn {
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: none;
   padding: 8px 16px;
 
   transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-  background: #FFD400;
+  background: #FFE300;
   color: #0B0B0B;
-  box-shadow: 0 0 16px rgba(255,212,0,0.45);
+  box-shadow: 0 0 18px rgba(255,227,0,0.55);
 }
 
 /* HEADER NORMAL */
@@ -89,8 +89,22 @@
 /* HEADER SHRINK */
 .header.shrink {
   padding: 6px 0;
-  background: rgba(11, 11, 11, 0.80);
+  background: rgba(11, 11, 11, 0.82);
   backdrop-filter: blur(18px);
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #FFE300;
+  text-shadow: 0 0 18px rgba(255,227,0,0.35);
+  transform: translateZ(0);
+}
+
+.header.shrink .brand {
+  transform: scale(0.96);
+  text-shadow: 0 0 14px rgba(255,227,0,0.3);
 }
 
 /* LOGO ANIMAÇÃO */

@@ -17,11 +17,10 @@ export const TAG_COLORS = {
 };
 
 export function tagStyle(colorHex) {
-  const rgb = hexToRgb(colorHex);
+  const textColor = getContrastColor(colorHex);
   return {
-    backgroundColor: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.18)`,
-    border: `1px solid rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.7)`,
-    color: `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`,
+    backgroundColor: colorHex,
+    color: textColor,
   };
 }
 
@@ -33,4 +32,12 @@ function hexToRgb(hex) {
     g: (bigint >> 8) & 255,
     b: bigint & 255,
   };
+}
+
+function getContrastColor(hex) {
+  const { r, g, b } = hexToRgb(hex);
+  const [sr, sg, sb] = [r, g, b].map(v => v / 255);
+  const a = [sr, sg, sb].map(c => (c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
+  const luminance = 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+  return luminance > 0.5 ? '#0B0B0B' : '#FFFFFF';
 }

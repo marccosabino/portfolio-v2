@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Sobre from "./components/Sobre";
-import Habilidades from "./components/Habilidades";
-import Projetos from "./components/Projetos";
-import Contato from "./components/Contato";
+import TechSnapshot from "./sections/TechSnapshot";
+import ProjetosDestaque from "./sections/ProjetosDestaque";
+import StackTecnica from "./sections/StackTecnica";
+import CTAFinal from "./sections/CTAFinal";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -11,10 +11,10 @@ export default function App() {
     <>
       <Header />
       <Hero />
-      <Sobre />
-      <Habilidades />
-      <Projetos />
-      <Contato />
+      <TechSnapshot />
+      <ProjetosDestaque />
+      <StackTecnica />
+      <CTAFinal />
       <Footer />
     </>
   );
