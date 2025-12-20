@@ -20,13 +20,12 @@ export default function Header() {
   return (
     <header className={`header ${isShrunk ? "shrink" : ""}`}>
       <div className="header-container">
-        <h1 className="logo">Marco.dev</h1>
 
         <nav className="nav">
           <a href="#home" className="nav-link">Início</a>
-          <a href="#projects" className="nav-link">Projetos</a>
-          <a href="#about" className="nav-link">Sobre</a>
-          <a href="#contact" className="nav-link contact-btn">Contato</a>
+          <a href="#projetos" className="nav-link">Projetos</a>
+          <a href="#sobre" className="nav-link">Sobre</a>
+          <a href="#contato" className="nav-link contact-btn">Contato</a>
         </nav>
       </div>
     </header>

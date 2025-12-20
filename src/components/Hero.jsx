@@ -14,11 +14,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-[#060B18] overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-[#0B0B0B] overflow-hidden" id="home">
 
       {/* ESFERAS FLUTUANTES */}
-      <div className="absolute w-[500px] h-[500px] bg-[#1B2A4A]/30 blur-[140px] rounded-full animate-float -top-20 -left-24" />
-      <div className="absolute w-[400px] h-[400px] bg-[#0E1A33]/30 blur-[120px] rounded-full animate-float2 top-40 -right-20" />
+      <div className="absolute w-[500px] h-[500px] bg-[#FFD400]/12 blur-[140px] rounded-full animate-float -top-20 -left-24" />
+      <div className="absolute w-[400px] h-[400px] bg-[#FFD400]/8 blur-[120px] rounded-full animate-float2 top-40 -right-20" />
 
       {/* CONTEÚDO */}
       <div className="relative z-10 flex flex-col items-center">
@@ -61,8 +61,8 @@ export default function Hero() {
           }
 
           .hero-icon:hover {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 212, 0, 0.15);
+            border-color: rgba(255, 212, 0, 0.6);
             transform: translateY(-3px);
           }
 
@@ -74,7 +74,7 @@ export default function Hero() {
             display: inline-block;
             width: 6px;
             margin-left: 2px;
-            background: white;
+            background: #FFD400;
             animation: blink 0.8s infinite;
           }
 
